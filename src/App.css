@@ -9,7 +9,8 @@
 }
 
 .header,
-.header-logo {
+.header-logo,
+.task_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,4 +56,43 @@ input {
   color: white;
   font-weight: bolder;
   font-size: larger;
+}
+
+.task_section {
+  border: 1px solid rgb(191, 188, 188);
+  padding: 2rem;
+}
+
+.task_header > button {
+  background-color: blue;
+  padding: 1rem;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  border: none;
+  border-radius: 1rem;
+}
+
+.task_plate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(183, 177, 177);
+  border-radius: 1rem;
+  width: 30%;
+  border-left: 1rem solid blue;
+  margin: 1rem;
+}
+
+.task_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
