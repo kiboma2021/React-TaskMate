@@ -79,7 +79,6 @@ input {
   align-items: center;
   border: 1px solid rgb(183, 177, 177);
   border-radius: 1rem;
-  width: 30%;
   border-left: 1rem solid blue;
   margin: 1rem;
 }
