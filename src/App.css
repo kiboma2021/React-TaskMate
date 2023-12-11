@@ -1,5 +1,32 @@
+
+.components {
+  margin: 1% 20%;
+}
 .circle {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+}
+
+.header,
+.header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  background-color: white;
+  border: 2px solid rgb(210, 210, 210);
+  padding: 1rem;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.color-btns > button,
+.header-logo {
+  gap: 2rem;
+  margin-right: 1rem;
 }

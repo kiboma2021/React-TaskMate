@@ -3,17 +3,17 @@ import Logo from '../assets/logo.jpeg'
 const Header = () => {
   return (
     <div className='header'>
-        <div>
+        <div className='header-logo'>
             <img className='logo' src={Logo} alt="" />
-            <h3>Taskmate</h3>
+            <h2>Taskmate</h2>
         </div>
-        <div>
-            <button className="circle"></button>
-            <button className="circle"></button>
-            <button className="circle"></button>
-            <button className="circle"></button>
-            <button className="circle"></button>
-            <button className="circle"></button>
+        <div className='color-btns'>
+            <button className="circle" style={{backgroundColor:'white'}}></button>
+            <button className="circle" style={{backgroundColor:'rgb(210, 210, 210)'}}></button>
+            <button className="circle" style={{backgroundColor:'black'}}></button>
+            <button className="circle" style={{backgroundColor:'blue'}}></button>
+            <button className="circle" style={{backgroundColor:'green'}}></button>
+            <button className="circle" style={{backgroundColor:'yellow'}}></button>
         </div>
       
     </div>
