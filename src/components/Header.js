@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import Logo from '../assets/logo.jpeg'
 
 const Header = () => {
+    const [backcolor, setBackcolor] = useState("green-color")
   return (
     <div className='header'>
         <div className='header-logo'>
