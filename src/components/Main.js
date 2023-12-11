@@ -43,7 +43,7 @@ const Main = () => {
         </form>
         <div className="task_section">
             <div className="task_header">
-                <h2>Todo <span> </span></h2>
+                <h2>Todo <span>{tasks.length}</span></h2>
                 <button>Clear All</button>
             </div>
             <hr />
