@@ -8,8 +8,8 @@ const ShowTask = ({task, handleDelete}) => {
             <p>Time and Date</p>                    
         </div>
         <div className="task_actions">
-            <span>Edit</span>
-            <span onClick={()=>handleDelete(task.id)}>Delete</span>
+            <span> <i className="fa fa-edit"></i></span>
+            <span onClick={()=>handleDelete(task.id)} style={{color:'red'}}><i className='fa fa-trash'></i> </span>
         </div>
     </div>
   )
