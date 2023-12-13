@@ -46,7 +46,7 @@ const Main = () => {
 
     function handleDelete(id){
         console.log("Clicked.....",id)
-        setTasks(tasks.filter(task => task.id != id) )
+        setTasks(tasks.filter(task => task.id !== id) )
         
     }
 
