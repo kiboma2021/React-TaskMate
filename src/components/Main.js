@@ -3,14 +3,7 @@ import AddTask from "./AddTask";
 import ShowTask from "./ShowTask";
 
 const Main = () => {
-    const [tasks, setTasks] =useState([
-        {id: 1234, name: 'Wash utensils',time: "2:09:01 AM 01/01/2023"},
-        {id: 1235, name: 'Go jogging',time: "3:09:01 AM 14/02/2023"},
-        {id: 1236, name: 'Write code',time: "5:09:01 AM 14/04/2023"},
-        {id: 1237, name: 'Go to the market',time: "11:09:01 AM 14/07/2023"},
-        {id: 1238, name: 'Teach children',time: "2:56:01 AM 14/03/2023"},
-        {id: 1239, name: 'Drive home',time: "6:09:21 AM 16/12/2023"},
-    ]);
+    const [tasks, setTasks] =useState([]);
     const [name, setName] = useState("");
 
     function handleName(event){
