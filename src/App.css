@@ -97,3 +97,9 @@ input {
   margin-right: 2rem;
   gap: 1rem;
 }
+
+.show_num {
+  background-color: rgb(192, 191, 191);
+  padding: 0.3rem;
+  border-radius: 50%;
+}

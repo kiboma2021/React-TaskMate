@@ -63,7 +63,7 @@ const Main = () => {
         
         <div className="task_section">
             <div className="task_header">
-                <h2>Todo <span>{tasks.length
+                <h2>Todo <span className="show_num">{tasks.length
                 }</span></h2>
                 <button>Clear All</button>
             </div>
