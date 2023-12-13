@@ -5,7 +5,7 @@ const ShowTask = ({task, handleDelete}) => {
     <div className="task_plate" key={task.id}>
         <div className="task_name">
             <h3>{task.name}</h3>
-            <p>Time and Date</p>                    
+            <p>{task.time}</p>                    
         </div>
         <div className="task_actions">
             <span> <i className="fa fa-edit"></i></span>
