@@ -1,4 +1,6 @@
 import { useState } from "react";
+import AddTask from "./AddTask";
+import ShowTask from "./ShowTask";
 
 const Main = () => {
     const [tasks, setTasks] =useState([
@@ -37,27 +39,17 @@ const Main = () => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit} className="addTask">
-            <input type="text" placeholder="Task" onChange={handleName} value={name} />
-            <button type="submit" className="addBtn">Save</button>
-        </form>
+        <AddTask handleSubmit={handleSubmit} handleName={handleName} name={name} />
+        
         <div className="task_section">
             <div className="task_header">
-                <h2>Todo <span>{tasks.length}</span></h2>
+                <h2>Todo <span>{tasks.length
+                }</span></h2>
                 <button>Clear All</button>
             </div>
             <hr />
             {tasks && tasks.map(task =>
-            <div className="task_plate" key={task.id}>
-                <div className="task_name">
-                    <h3>{task.name}</h3>
-                    <p>Time and Date</p>                    
-                </div>
-                <div className="task_actions">
-                    <span>Edit</span>
-                    <span onClick={()=>handleDelete(task.id)}>Delete</span>
-                </div>
-            </div>
+                <ShowTask task={task} handleDelete={handleDelete} />
             )}
         </div>
       
