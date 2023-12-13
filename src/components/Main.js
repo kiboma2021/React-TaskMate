@@ -58,7 +58,7 @@ const Main = () => {
             <div className="task_header">
                 <h2>Todo <span className="show_num">{tasks.length
                 }</span></h2>
-                <button>Clear All</button>
+                <button onClick={()=>setTasks("")}>Clear All</button>
             </div>
             <hr />
             {tasks && tasks.map(task =>
