@@ -14,7 +14,7 @@ const Main = () => {
     <div>
         <AddTask taskList={taskList} setTaskList={setTaskList} />
         <TaskHeader taskList={taskList} setTaskList={setTaskList} />
-        <ShowTask taskList={taskList} />      
+        <ShowTask taskList={taskList} setTaskList={setTaskList} />      
     </div>
   )
 }
