@@ -1,28 +1,37 @@
-const AddTask = ({taskList, setTaskList}) => {
+const AddTask = ({taskList, setTaskList, task, setTask}) => {
 
   const date = new Date();
 
   function handleSubmit(e){
       e.preventDefault();
-      const taskid= Math.floor(Math.random()*10000)
-      const new_task = {
-          id: taskid,
-          name: e.target.task.value,
-          time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
 
+      if (task.id){
+        const date = new Date();
+        const updatedTaskList = taskList.map((todo)=>(
+          todo.id === task.id?{id: task.id, name: task.name, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}:task 
+        ));
+        setTaskList(updatedTaskList);
+
+      } else {
+        const taskid= Math.floor(Math.random()*10000)
+        const new_task = {
+            id: taskid,
+            name: e.target.task.value,
+            time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
+  
+        }
+        setTaskList([...taskList, new_task]);
+        e.target.task.value="";
       }
 
-      console.log(new_task);
 
-      setTaskList([...taskList, new_task]);
-      e.target.task.value="";
 
   }
 
   return (
     <form onSubmit={handleSubmit} className="addTask">
-        <input type="text" placeholder="Task" maxLength={255} name="task" />
-        <button type="submit" className="addBtn">Save</button>
+        <input type="text" placeholder="Task" maxLength={255} name="task" value={task.name} onChange={e => setTask({...task,name:e.target.value})} />
+        <button type="submit" className="addBtn">{task.name?"Update":"Add"}</button>
 
     </form>
   )

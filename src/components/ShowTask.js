@@ -1,8 +1,14 @@
 import React from 'react'
 
-const ShowTask = ({ taskList,setTaskList }) => {
+const ShowTask = ({ taskList,setTaskList,task,setTask }) => {
   function handleDelete(id){
     setTaskList(taskList.filter(task => task.id !== id))
+  }
+
+  function handleEdit(id) {
+    const edit_task = taskList.find(task => task.id === id)
+    setTask(edit_task);
+    
   }
 
   return (
@@ -14,7 +20,7 @@ const ShowTask = ({ taskList,setTaskList }) => {
                 <p>{task.time}</p>                    
             </div>
             <div className="task_actions">
-                <span> <i className="fa fa-edit"></i></span>
+                <span onClick={()=>handleEdit(task.id)}> <i className="fa fa-edit"></i></span>
                 <span onClick={()=>handleDelete(task.id)} style={{color:'red'}}><i className='fa fa-trash'></i> </span>
             </div>
         </div>
