@@ -50,6 +50,10 @@ const Main = () => {
         
     }
 
+    function handleEdit(id,name){
+        setName(name)
+    }
+
   return (
     <div>
         <AddTask handleSubmit={handleSubmit} handleName={handleName} name={name} />
@@ -62,7 +66,7 @@ const Main = () => {
             </div>
             <hr />
             {tasks && tasks.map(task =>
-                <ShowTask task={task} handleDelete={handleDelete} />
+                <ShowTask task={task} handleDelete={handleDelete} handleEdit={handleEdit} />
             )}
         </div>
       
