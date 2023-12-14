@@ -4,10 +4,7 @@ import ShowTask from "./ShowTask";
 import TaskHeader from "./TaskHeader";
 
 const Main = () => {
-    const [taskList, setTaskList] =useState([
-        {id: 21554, name:"wash utensils"},
-        {id: 23565, name:"clean the house"},
-    ]);
+    const [taskList, setTaskList] =useState([]);
 
 
   return (

@@ -1,44 +1,27 @@
-import {useState} from 'react'
-
 const AddTask = ({taskList, setTaskList}) => {
-  const [task, setTask] = useState({});
 
-  function getCurrentDateTime() {
-      const now = new Date();
-      
-      const options = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-      };
-    
-      const formattedDateTime = new Intl.DateTimeFormat('en-US', options).format(now);
-    
-      return formattedDateTime;
-    }
+  const date = new Date();
 
-  function handleSubmit(event){
-      event.preventDefault();
+  function handleSubmit(e){
+      e.preventDefault();
       const taskid= Math.floor(Math.random()*10000)
       const new_task = {
           id: taskid,
-          name: event.target.value,
-          time: getCurrentDateTime(),
+          name: e.target.task.value,
+          time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
+
       }
 
       console.log(new_task);
 
       setTaskList([...taskList, new_task]);
-      setTask({});
+      e.target.task.value="";
+
   }
 
   return (
     <form onSubmit={handleSubmit} className="addTask">
-        <input type="text" placeholder="Task" maxLength={255} value={task.name} onChange={(e)=>setTask(e.target.value)} />
+        <input type="text" placeholder="Task" maxLength={255} name="task" />
         <button type="submit" className="addBtn">Save</button>
 
     </form>
