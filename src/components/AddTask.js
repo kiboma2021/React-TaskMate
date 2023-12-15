@@ -6,9 +6,10 @@ const AddTask = ({taskList, setTaskList, task, setTask}) => {
       e.preventDefault();
 
       if (task.id){
+        console.log(task.id);
         const date = new Date();
         const updatedTaskList = taskList.map((todo)=>(
-          todo.id === task.id?{id: task.id, name: task.name, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}:task 
+          todo.id === task.id?{id: task.id, name: task.name, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}:todo 
         ));
         setTaskList(updatedTaskList);
 
@@ -21,7 +22,7 @@ const AddTask = ({taskList, setTaskList, task, setTask}) => {
   
         }
         setTaskList([...taskList, new_task]);
-        e.target.task.value="";
+        task.name="";
       }
 
 
@@ -31,7 +32,7 @@ const AddTask = ({taskList, setTaskList, task, setTask}) => {
   return (
     <form onSubmit={handleSubmit} className="addTask">
         <input type="text" placeholder="Task" maxLength={255} name="task" value={task.name} onChange={e => setTask({...task,name:e.target.value})} />
-        <button type="submit" className="addBtn">{task.name?"Update":"Add"}</button>
+        <button type="submit" className="addBtn">{task.id?"Update":"Add"}</button>
 
     </form>
   )

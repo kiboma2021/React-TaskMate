@@ -16,7 +16,7 @@ const ShowTask = ({ taskList,setTaskList,task,setTask }) => {
       {taskList.map(task =>
         <div className="task_plate" key={task.id}>
             <div className="task_name">
-                <h3>{task.name}</h3>
+                <h3>{task.id} - {task.name}</h3>
                 <p>{task.time}</p>                    
             </div>
             <div className="task_actions">
