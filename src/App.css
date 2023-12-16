@@ -8,6 +8,12 @@
   border-radius: 50%;
 }
 
+.activeTheme {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
 .header,
 .header-logo,
 .task_header {

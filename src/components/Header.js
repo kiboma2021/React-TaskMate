@@ -1,8 +1,15 @@
-//import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Logo from '../assets/logo.jpeg'
 
 const Header = () => {
-    //const [backcolor, setBackcolor] = useState("green-color")
+    
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "light");
+
+  useEffect(() =>{
+    document.documentElement.removeAttribute("class");
+    document.documentElement.classList.add(theme);
+  },[theme])
+
   return (
     <div className='header'>
         <div className='header-logo'>
@@ -10,12 +17,12 @@ const Header = () => {
             <h2>Taskmate</h2>
         </div>
         <div className='color-btns'>
-            <button className="circle" style={{backgroundColor:'white'}}></button>
-            <button className="circle" style={{backgroundColor:'rgb(210, 210, 210)'}}></button>
-            <button className="circle" style={{backgroundColor:'black'}}></button>
-            <button className="circle" style={{backgroundColor:'blue'}}></button>
-            <button className="circle" style={{backgroundColor:'green'}}></button>
-            <button className="circle" style={{backgroundColor:'yellow'}}></button>
+            <button onClick={()=>setTheme("light")} className="circle light"></button>
+            <button onClick={()=>setTheme("grey")} className="circle grey"></button>
+            <button onClick={()=>setTheme("dark")} className="circle dark activeTheme"></button>
+            <button onClick={()=>setTheme("blue")} className="circle blue"></button>
+            <button onClick={()=>setTheme("green")} className="circle green"></button>
+            <button onClick={()=>setTheme("yellow")} className="circle yellow"></button>
         </div>
       
     </div>
