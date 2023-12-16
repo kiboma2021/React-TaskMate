@@ -3,9 +3,10 @@ import Logo from '../assets/logo.jpeg'
 
 const Header = () => {
     
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "light");
 
   useEffect(() =>{
+    localStorage.setItem("theme",JSON.stringify(theme));
     document.documentElement.removeAttribute("class");
     document.documentElement.classList.add(theme);
   },[theme])
