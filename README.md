@@ -14,7 +14,7 @@
 - Css
 
 
-## 🚀 <a href="https://sparkly-liger-717062.netlify.app/" target="_blank">Live Demo Link</a>
+## 🚀 <a href="https://taskmate-kibs.netlify.app/" target="_blank">Live Demo Link</a>
 
 
 ## 👥 Authors <a name="authors"></a>
