@@ -1,4 +1,5 @@
 import { useState,useEffect } from 'react'
+import {Link, NavLink} from 'react-router-dom'
 import Logo from '../assets/logo.jpeg'
 
 const Header = () => {
@@ -14,14 +15,14 @@ const Header = () => {
   return (
     <div className='header'>
         <div className='header-logo'>
-          <a href="/" className='header-logo'>
+          <Link to="/" className='header-logo'>
             <img className='logo' src={Logo} alt="" />
             <h2>Taskmate</h2>
-          </a>
+          </Link>
 
           <nav className='header-logo'>
-            <a href="/">Home</a>
-            <a href="/contact">Contact us</a>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/contact">Contact us</NavLink>
           </nav>
         </div>
         <div className='color-btns'>
