@@ -115,3 +115,13 @@ input {
   padding: 2rem;
   border-bottom: 2px solid rgb(114, 110, 110);
 }
+
+.header-logo > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  color: purple;
+  list-style-type: none;
+}
