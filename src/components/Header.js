@@ -23,6 +23,7 @@ const Header = () => {
           <nav className='header-logo'>
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/contact">Contact us</NavLink>
+            <NavLink to="/admin" >Admin</NavLink>
           </nav>
         </div>
         <div className='color-btns'>
