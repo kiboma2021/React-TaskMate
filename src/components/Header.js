@@ -16,6 +16,12 @@ const Header = () => {
         <div className='header-logo'>
             <img className='logo' src={Logo} alt="" />
             <h2>Taskmate</h2>
+            <ul>
+              <li>Home</li>
+              <li>Contact us</li>
+              <li>Careers</li>
+              <li>About us</li>
+            </ul>
         </div>
         <div className='color-btns'>
             <button onClick={()=>setTheme("light")} className={theme === 'light'?'circle light activeTheme':'circle light'}></button>
