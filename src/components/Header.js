@@ -14,14 +14,15 @@ const Header = () => {
   return (
     <div className='header'>
         <div className='header-logo'>
+          <a href="/" className='header-logo'>
             <img className='logo' src={Logo} alt="" />
             <h2>Taskmate</h2>
-            <ul>
-              <li>Home</li>
-              <li>Contact us</li>
-              <li>Careers</li>
-              <li>About us</li>
-            </ul>
+          </a>
+
+          <nav className='header-logo'>
+            <a href="/">Home</a>
+            <a href="/contact">Contact us</a>
+          </nav>
         </div>
         <div className='color-btns'>
             <button onClick={()=>setTheme("light")} className={theme === 'light'?'circle light activeTheme':'circle light'}></button>
