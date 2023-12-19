@@ -21,7 +21,7 @@ const Header = () => {
           </Link>
 
           <nav className='header-logo'>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" end>Home</NavLink>
             <NavLink to="/contact">Contact us</NavLink>
           </nav>
         </div>

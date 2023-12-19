@@ -125,3 +125,9 @@ input {
   color: purple;
   list-style-type: none;
 }
+
+.active{
+  background-color: greenyellow;
+  padding: 1rem;
+  border-radius: 1rem;
+}
