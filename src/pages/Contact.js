@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Contact = () => {
+export const Contact = () => {
 
   const navigate = useNavigate();
 
@@ -23,4 +23,3 @@ const Contact = () => {
   )
 }
 
-export default Contact

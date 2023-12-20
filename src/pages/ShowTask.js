@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShowTask = ({ taskList,setTaskList,task,setTask }) => {
+export const ShowTask = ({ taskList,setTaskList,task,setTask }) => {
   function handleDelete(id){
     setTaskList(taskList.filter(task => task.id !== id))
   }
@@ -29,4 +29,3 @@ const ShowTask = ({ taskList,setTaskList,task,setTask }) => {
   )
 }
 
-export default ShowTask

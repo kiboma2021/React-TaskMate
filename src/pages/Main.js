@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import AddTask from "./AddTask";
-import ShowTask from "./ShowTask";
-import TaskHeader from "./TaskHeader";
+import {AddTask} from "./AddTask";
+import {ShowTask} from "./ShowTask";
+import {TaskHeader} from "./TaskHeader";
 
-const Main = () => {
+export const Main = () => {
     const [taskList, setTaskList] =useState(JSON.parse(localStorage.getItem("taskList")) || []);
     const [task, setTask]=useState({});
 
@@ -21,4 +21,3 @@ const Main = () => {
   )
 }
 
-export default Main

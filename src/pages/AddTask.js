@@ -1,4 +1,4 @@
-const AddTask = ({taskList, setTaskList, task, setTask}) => {
+export const AddTask = ({taskList, setTaskList, task, setTask}) => {
 
   const date = new Date();
 
@@ -35,4 +35,3 @@ const AddTask = ({taskList, setTaskList, task, setTask}) => {
   )
 }
 
-export default AddTask
