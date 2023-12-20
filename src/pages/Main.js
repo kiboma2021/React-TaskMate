@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import {AddTask} from "./AddTask";
-import {ShowTask} from "./ShowTask";
-import {TaskHeader} from "./TaskHeader";
+
+import { AddTask,ShowTask,TaskHeader } from "./index";
 
 export const Main = () => {
     const [taskList, setTaskList] =useState(JSON.parse(localStorage.getItem("taskList")) || []);
